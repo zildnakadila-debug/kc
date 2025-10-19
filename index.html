@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kc Lyn Joy M. Esperon </title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"></div>
+
+        <div class="main-content">
+            <div id="header-container"></div>
+
+            <section class="about-section" id="about">
+                <h2>About Me</h2>
+                <p class="subtitle">Information Technology Student</p>
+            </section>
+
+            <div class="content">
+                <div class="main-text">
+                    <h3>Basta About me section</h3>
+                <p>
+                  Hi! I’m <strong>Kc Lyn Esperon</strong>, an 18-year-old Information Technology student studying at <strong>Northeastern College</strong> in Santiago City.<br><br>
+                  I’m passionate about learning new things in technology and design, and I love exploring creative ways to express ideas online.<br><br>
+                  My favorite food is <strong>Shanghai</strong> — I could eat it any time of the day!<br>
+                  When I’m relaxing, I enjoy watching my favorite TV show, <strong>My Boss</strong>.<br>
+                  My birthday is on <strong>May 26, 2007</strong>, and one of my hobbies is <strong>dance</strong>.<br><br>
+                  I believe that every small project helps me grow and brings me one step closer to becoming a better creator.
+                </p>
+                </div>           
+        </div>
+
+     <section class="services-section">
+  <h3>Services</h3>
+<div class="services-grid">
+
+  <div class="service-card">
+    <img src="/images/services/web.png" alt="Web Design">
+    <h4>Web Design</h4>
+    <p>I design responsive and user-friendly websites.</p>
+  </div>
+
+  <div class="service-card">
+    <img src="/images/services/copywriter.png" alt="Copywriting">
+    <h4>Copywriting</h4>
+    <p>I craft clear and engaging content that connects with the reader.</p>
+  </div>
+
+  <div class="service-card">
+    <img src="/images/services/ecommerce.png" alt="E-Commerce">
+    <h4>E-Commerce</h4>
+    <p>I help create online stores that are easy to navigate and visually appealing.</p>
+  </div>
+
+  <div class="service-card">
+    <img src="/images/services/music.png" alt="Music">
+    <h4>Music</h4>
+    <p>It helps me express ideas and emotions that inspire my design work too.</p>
+  </div>
+
+</div>
+
+</section>
+<div id="footer-container"></div>
+
+    </div>
+ <script src="script.js"></script>
+ <script>
+document.addEventListener("DOMContentLoaded", async () => {
+  await ComponentManager.loadHtml("components/sidebar.html", "sidebar-container");
+  await ComponentManager.loadHtml("components/header.html", "header-container");
+  await ComponentManager.loadHtml("components/footer.html", "footer-container");
+  const contactLink = document.querySelector('.nav-menu a[href="/index.html"]');
+  if (contactLink) contactLink.classList.add("active");
+});
+</script>
+</body>
+</html>
