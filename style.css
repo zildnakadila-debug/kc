@@ -401,3 +401,55 @@ a[href^="mailto:"] {
   pointer-events: auto;
   cursor: pointer;
 }
+
+.footer {
+  background: linear-gradient(180deg, #f782b1 0%, #e94d9b 100%);
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left h4 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.footer-social a img {
+  display: block;
+  filter: brightness(0) invert(1); /* turns the icons white */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+  opacity: 0.9;
+}

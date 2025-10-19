@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Activities – Kc Lyn Esperon</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
         <link rel="stylesheet" href="style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
 
@@ -91,10 +91,44 @@
 
     <body>
         <div class="container">
-            <div id="sidebar-container"></div>
+            <div id="sidebar-container"><aside class="sidebar">
+    <h1>Kc Lyn Joy M. Esperon </h1>
+    <p class="subtitle">Information Technology</p>
+    <div class="profile-pic">
+        <div class="avatar">
+            <img src="images/image.png" alt="">
+        </div>
+    </div>
+</aside></div>
 
             <div class="main-content">
-                <div id="header-container"></div>
+                <div id="header-container">
+                    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <nav>
+        <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">About me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="social-links" style="display: flex; gap: 12px; align-items: center;">
+        <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" style="display: block;" />
+        </a>
+
+        <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" style="display: block;" />
+        </a>
+
+       <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email" style="text-decoration: none;">
+          <img src="images/icons/gmail.png" alt="Email" width="24" height="24" style="display: block;" />
+        </a>
+
+    </div>
+</header>
+
+                </div>
 
                 <section class="activities-section">
                     <h2>My Activities</h2>
@@ -128,16 +162,37 @@
                 </section>
             </div>
         </div>
-        <div id="footer-container"></div>
+        <div id="footer-container">
+            <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h4>Kc Lyn Esperon</h4>
+            <p>Information Technology Student</p>
+        </div>
 
-        <script src="script.js"></script>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank">
+                <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" />
+            </a>
+
+            <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank">
+                <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" />
+            </a>
+
+            <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email">
+                <img src="images/icons/gmail.png" alt="Email" width="24" height="24" />
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Kc Lyn Esperon. All rights reserved.</p>
+    </div>
+</footer>
+        </div>
         <script>
             document.addEventListener("DOMContentLoaded", async () => {
-                await ComponentManager.loadHtml("components/sidebar.html", "sidebar-container");
-                await ComponentManager.loadHtml("components/header.html", "header-container");
-                await ComponentManager.loadHtml("components/footer.html", "footer-container");
-
-                const navLink = document.querySelector('.nav-menu a[href="/portfolio.html"]');
+                const navLink = document.querySelector('.nav-menu a[href="portfolio.html"]');
                 if (navLink) navLink.classList.add("active");
             });
         </script>

@@ -5,16 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kc Lyn Joy M. Esperon </title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
-        <div id="sidebar-container"></div>
+        <div id="sidebar-container"><aside class="sidebar">
+    <h1>Kc Lyn Joy M. Esperon </h1>
+    <p class="subtitle">Information Technology</p>
+    <div class="profile-pic">
+        <div class="avatar">
+            <img src="images/image.png" alt="">
+        </div>
+    </div>
+</aside></div>
 
         <div class="main-content">
-            <div id="header-container"></div>
+            <div id="header-container">
+              <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <nav>
+        <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">About me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="social-links" style="display: flex; gap: 12px; align-items: center;">
+        <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" style="display: block;" />
+        </a>
+
+        <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" style="display: block;" />
+        </a>
+
+       <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email" style="text-decoration: none;">
+          <img src="images/icons/gmail.png" alt="Email" width="24" height="24" style="display: block;" />
+        </a>
+
+    </div>
+</header>
+
+            </div>
 
             <section class="about-section" id="about">
                 <h2>About Me</h2>
@@ -40,25 +74,25 @@
 <div class="services-grid">
 
   <div class="service-card">
-    <img src="/images/services/web.png" alt="Web Design">
+    <img src="images/services/web.png" alt="Web Design">
     <h4>Web Design</h4>
     <p>I design responsive and user-friendly websites.</p>
   </div>
 
   <div class="service-card">
-    <img src="/images/services/copywriter.png" alt="Copywriting">
+    <img src="images/services/copywriter.png" alt="Copywriting">
     <h4>Copywriting</h4>
     <p>I craft clear and engaging content that connects with the reader.</p>
   </div>
 
   <div class="service-card">
-    <img src="/images/services/ecommerce.png" alt="E-Commerce">
+    <img src="images/services/ecommerce.png" alt="E-Commerce">
     <h4>E-Commerce</h4>
     <p>I help create online stores that are easy to navigate and visually appealing.</p>
   </div>
 
   <div class="service-card">
-    <img src="/images/services/music.png" alt="Music">
+    <img src="images/services/music.png" alt="Music">
     <h4>Music</h4>
     <p>It helps me express ideas and emotions that inspire my design work too.</p>
   </div>
@@ -66,16 +100,40 @@
 </div>
 
 </section>
-<div id="footer-container"></div>
+<div id="footer-container">
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h4>Kc Lyn Esperon</h4>
+            <p>Information Technology Student</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank">
+                <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" />
+            </a>
+
+            <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank">
+                <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" />
+            </a>
+
+            <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email">
+                <img src="images/icons/gmail.png" alt="Email" width="24" height="24" />
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Kc Lyn Esperon. All rights reserved.</p>
+    </div>
+</footer>
+</div>
 
     </div>
  <script src="script.js"></script>
  <script>
 document.addEventListener("DOMContentLoaded", async () => {
-  await ComponentManager.loadHtml("components/sidebar.html", "sidebar-container");
-  await ComponentManager.loadHtml("components/header.html", "header-container");
-  await ComponentManager.loadHtml("components/footer.html", "footer-container");
-  const contactLink = document.querySelector('.nav-menu a[href="/index.html"]');
+  const contactLink = document.querySelector('.nav-menu a[href="index.html"]');
   if (contactLink) contactLink.classList.add("active");
 });
 </script>

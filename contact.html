@@ -5,15 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Contact - Kc Lyn Joy M. Esperon</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div class="container">
-            <div id="sidebar-container"></div>
+            <div id="sidebar-container"><aside class="sidebar">
+    <h1>Kc Lyn Joy M. Esperon </h1>
+    <p class="subtitle">Information Technology</p>
+    <div class="profile-pic">
+        <div class="avatar">
+            <img src="images/image.png" alt="">
+        </div>
+    </div>
+</aside></div>
 
             <div class="main-content">
-                <div id="header-container"></div>
+                <div id="header-container">
+                    <header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <nav>
+        <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html">About me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="social-links" style="display: flex; gap: 12px; align-items: center;">
+        <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" style="display: block;" />
+        </a>
+
+        <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank" style="text-decoration: none;">
+            <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" style="display: block;" />
+        </a>
+
+       <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email" style="text-decoration: none;">
+          <img src="images/icons/gmail.png" alt="Email" width="24" height="24" style="display: block;" />
+        </a>
+
+    </div>
+</header>
+
+                </div>
                 <section class="about-section" id="contact">
                     <h2>Contact Me</h2>
                     <p class="subtitle">Get in Touch</p>
@@ -31,11 +65,11 @@
 
                         <div class="social-links" style="display: flex; gap: 12px; margin-top: 10px;">
                             <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" style="color: inherit; text-decoration: none;">
-                                <img src="/images/icons/ig.png" alt="Instagram" width="24" height="24" style="display: block;" />
+                                <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" style="display: block;" />
                             </a>
 
                             <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" style="color: inherit; text-decoration: none;">
-                                <img src="/images/icons/fb.png" alt="Facebook" width="24" height="24" style="display: block;" />
+                                <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" style="display: block;" />
                             </a>
                         </div>
                     </div>
@@ -61,17 +95,39 @@
                 </div>
             </div>
         </div>
-        <div id="footer-container"></div>
-        <script src="script.js"></script>
-        <script src="script.js"></script>
+        <div id="footer-container">
+            <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h4>Kc Lyn Esperon</h4>
+            <p>Information Technology Student</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/mrcs_keyc" aria-label="Instagram" target="_blank">
+                <img src="images/icons/ig.png" alt="Instagram" width="24" height="24" />
+            </a>
+
+            <a href="https://www.facebook.com/kclyn.marcos.esperon" aria-label="Facebook" target="_blank">
+                <img src="images/icons/fb.png" alt="Facebook" width="24" height="24" />
+            </a>
+
+            <a href="mailto:kclynmarcos26@gmail.com" aria-label="Email">
+                <img src="images/icons/gmail.png" alt="Email" width="24" height="24" />
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Kc Lyn Esperon. All rights reserved.</p>
+    </div>
+</footer>
+        </div>
         <script>
             document.addEventListener("DOMContentLoaded", async () => {
-                await ComponentManager.loadHtml("components/sidebar.html", "sidebar-container");
-                await ComponentManager.loadHtml("components/header.html", "header-container");
-                await ComponentManager.loadHtml("components/footer.html", "footer-container");
 
                 const checkNav = setInterval(() => {
-                    const contactLink = document.querySelector('.nav-menu a[href="/contact.html"]');
+                    const contactLink = document.querySelector('.nav-menu a[href="contact.html"]');
                     if (contactLink) {
                         contactLink.classList.add("active");
                         clearInterval(checkNav);
